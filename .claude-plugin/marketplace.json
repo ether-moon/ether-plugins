@@ -1,0 +1,61 @@
+{
+  "name": "ether-plugins",
+  "owner": {
+    "name": "ether-moon"
+  },
+  "metadata": {
+    "description": "ether-moon's Claude Code plugin collection — productivity skills, agent orchestration, knowledge management, and framework-specific toolkits."
+  },
+  "plugins": [
+    {
+      "name": "skill-set",
+      "description": "Comprehensive productivity skills and development tools for Claude Code, including git workflow automation, code context understanding, peer LLM consulting, and PR review feedback processing.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ether-moon/skill-set.git",
+        "path": "plugins/skill-set",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "agent-atelier",
+      "description": "Autonomous product development loop — AI agent team that cycles through spec, implement, validate, and self-correct.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ether-moon/agent-atelier.git",
+        "path": "plugins/agent-atelier",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "knowledge-distillery",
+      "description": "A knowledge distillation system that delivers only verified knowledge to AI coding agents. 3-layer architecture with convention-based air gap.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ether-moon/knowledge-distillery.git",
+        "path": "plugins/knowledge-distillery",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "hotwire-frontend-skills",
+      "description": "7 skills (1 gateway + 6 specialists) for building Rails frontend with Hotwire — Turbo Drive, Turbo Frames, Turbo Streams, Stimulus, view transitions, forms, media, and native bridge.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ether-moon/hotwire-frontend-skills.git",
+        "path": "plugins/hotwire-frontend-skills",
+        "ref": "main"
+      }
+    },
+    {
+      "name": "herb-lsp-plugin",
+      "description": "Plugin to support herb-lsp in Claude Code.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ether-moon/herb-lsp-plugin.git",
+        "path": "plugins/herb-lsp-plugin",
+        "ref": "main"
+      }
+    }
+  ]
+}
