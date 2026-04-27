@@ -48,6 +48,26 @@ This means:
 - **Each plugin releases on its own schedule.** Updates to a plugin's `main` branch are picked up automatically by `claude plugin marketplace update`.
 - **The hub repo stays tiny.** It only contains `marketplace.json` and this README; no plugin code lives here.
 
+### Dogfooding inside plugin repos
+
+Each plugin's source repository registers this hub in its own `.claude/settings.json` for in-repo development:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "ether-plugins": {
+      "source": { "source": "github", "repo": "ether-moon/ether-plugins" }
+    }
+  },
+  "enabledPlugins": {
+    "<plugin-name>@ether-plugins": true,
+    "skill-set@ether-plugins": true
+  }
+}
+```
+
+A developer opening any plugin repo with Claude Code gets the plugin itself plus the shared `skill-set` tooling (e.g., `bumping-version`). A brand-new plugin must be added to this hub's `marketplace.json` before in-repo dogfooding can resolve.
+
 ## Contributing
 
 Issues and pull requests for individual plugins should go to **the plugin's source repository** (linked in the table above), not this marketplace repo.
