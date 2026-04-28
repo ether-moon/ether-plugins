@@ -1,3 +1,13 @@
 .DS_Store
 node_modules/
 .claude/
+
+# Knowledge Distillery — vault is committed as binary, reports are committed
+# Only ignore temporary/working files
+.knowledge/tmp/
+
+# Vault usage tracking (consumed and cleared by memento-commit)
+tmp/
+
+# Dynamic MCP config — contains secrets at runtime, must never be committed
+.mcp.json
