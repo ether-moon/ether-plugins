@@ -1,0 +1,23 @@
+## Decisions Made
+- Bundle all uncommitted changes into a single PR: User chose this over splitting workflows from vault setup, since they all belong to the same Knowledge Distillery initialization.
+- Use `chore:` commit prefix: Recent log uses `feat:`, `docs:`, `chore:` style; this change is tooling/infrastructure setup, not a user-visible feature or doc.
+
+## Problems Encountered
+- None
+
+## Constraints Identified
+- Project requires memento-commit for every commit (CLAUDE.md): All commits on this repo must attach a 7-section session summary on `refs/notes/commits` so the downstream pipeline (mark-evidence → collect-evidence → extract-candidates) has evidence.
+- `.knowledge/vault.db` is committed as binary (per .gitignore comment block): Only `.knowledge/tmp/` is ignored; the vault, changesets, and reports must remain tracked.
+- `.mcp.json` must never be committed: Contains runtime secrets per the new .gitignore rule — relevant whenever MCP config is touched in this repo.
+
+## Open Questions
+- None
+
+## Context
+Set up Knowledge Distillery on the `manila` branch as preparation for shipping a PR via `/skill-set:pr:ship`. Added four GitHub workflows for the distillation pipeline, CLAUDE.md directives covering the Knowledge Vault query path and Memento per-commit summary requirement, an empty vault.db, and .gitignore rules for the new ignore paths. No prior commits on this branch — the working tree was untracked.
+
+## Recorded Decisions
+None
+
+## Vault Entries Referenced
+None
