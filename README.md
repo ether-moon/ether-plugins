@@ -17,6 +17,7 @@ claude plugin marketplace add ether-moon/ether-plugins
 | `knowledge-distillery` | A knowledge distillation system that delivers only verified knowledge to AI coding agents. 3-layer architecture with convention-based air gap. | [ether-moon/knowledge-distillery](https://github.com/ether-moon/knowledge-distillery) |
 | `hotwire-frontend-skills` | 7 skills (1 gateway + 6 specialists) for building Rails frontend with Hotwire — Turbo Drive, Turbo Frames, Turbo Streams, Stimulus, view transitions, forms, media, and native bridge. | [ether-moon/hotwire-frontend-skills](https://github.com/ether-moon/hotwire-frontend-skills) |
 | `herb-lsp-plugin` | Plugin to support [herb-lsp](https://github.com/marcoroth/herb) in Claude Code. | [ether-moon/herb-lsp-plugin](https://github.com/ether-moon/herb-lsp-plugin) |
+| `backlog-md-workflow` | [Backlog.md](https://github.com/MrLesk/Backlog.md) task management workflow — setup, operating conventions, and guided task authoring. | [ether-moon/backlog-md-workflow](https://github.com/ether-moon/backlog-md-workflow) |
 
 ## Install individual plugins
 
@@ -26,6 +27,7 @@ claude plugin install agent-atelier@ether-plugins
 claude plugin install knowledge-distillery@ether-plugins
 claude plugin install hotwire-frontend-skills@ether-plugins
 claude plugin install herb-lsp-plugin@ether-plugins
+claude plugin install backlog-md-workflow@ether-plugins
 ```
 
 ## How it works
