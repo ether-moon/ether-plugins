@@ -56,6 +56,16 @@
         "path": "plugins/herb-lsp-plugin",
         "ref": "main"
       }
+    },
+    {
+      "name": "backlog-md-workflow",
+      "description": "Backlog.md task management workflow — setup, operating conventions, and guided task authoring.",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/ether-moon/backlog-md-workflow.git",
+        "path": "plugins/backlog-md-workflow",
+        "ref": "main"
+      }
     }
   ]
 }
