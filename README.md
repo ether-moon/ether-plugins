@@ -58,7 +58,25 @@ Install globally instead of into the current project:
 npx skills add -g ether-moon/skill-set --skill managing-git-workflow
 ```
 
-Swap `ether-moon/skill-set` for any of the source repos listed in the [Plugins](#plugins) table: `agent-atelier`, `knowledge-distillery`, `hotwire-frontend-skills`, `herb-lsp-plugin`, `backlog-md-workflow`.
+Swap `ether-moon/skill-set` for any of the source repos listed in the [Plugins](#plugins) table: `knowledge-distillery`, `hotwire-frontend-skills`, `herb-lsp-plugin`, `backlog-md-workflow`. (`agent-atelier` is Claude Code-specific and isn't designed to run under `npx skills`; install it via `claude plugin install` instead.)
+
+Install every skill from every agent-portable repo in one shot:
+
+```sh
+plugins=(
+  skill-set
+  knowledge-distillery
+  hotwire-frontend-skills
+  herb-lsp-plugin
+  backlog-md-workflow
+)
+
+for r in "${plugins[@]}"; do
+  npx skills add ether-moon/$r --skill '*' -y
+done
+```
+
+Add `-g` to install globally, and drop `-y` if you want to confirm each repo interactively.
 
 ## How it works
 
