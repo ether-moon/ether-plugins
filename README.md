@@ -30,6 +30,36 @@ claude plugin install herb-lsp-plugin@ether-plugins
 claude plugin install backlog-md-workflow@ether-plugins
 ```
 
+## Install skills via `npx skills`
+
+If you only want the skills (not the full plugin payload of commands/agents/hooks), or you want to use them with non-Claude-Code agents like Cursor or Codex, use [`vercel-labs/skills`](https://github.com/vercel-labs/skills). Each source repo's `.claude-plugin/marketplace.json` is auto-discovered, so the CLI finds nested skills under `plugins/<name>/skills/` without extra configuration.
+
+Preview available skills before installing:
+
+```sh
+npx skills add ether-moon/skill-set --list
+```
+
+Install every skill from a repo:
+
+```sh
+npx skills add ether-moon/skill-set --skill '*'
+```
+
+Install a specific skill:
+
+```sh
+npx skills add ether-moon/skill-set --skill bumping-version
+```
+
+Install globally instead of into the current project:
+
+```sh
+npx skills add -g ether-moon/skill-set --skill managing-git-workflow
+```
+
+Swap `ether-moon/skill-set` for any of the source repos listed in the [Plugins](#plugins) table: `agent-atelier`, `knowledge-distillery`, `hotwire-frontend-skills`, `herb-lsp-plugin`, `backlog-md-workflow`.
+
 ## How it works
 
 Each entry in `.claude-plugin/marketplace.json` uses the `git-subdir` source type to reference the plugin directory inside its source repository, tracking the `main` branch:
